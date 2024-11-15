@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/css/admin-ui.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="menu">
+            <ul>
+                <li id="uploadNew">
+                    upload new product
+                </li>
+                <li id="allUsers">
+                    User Management
+                </li>
+                <li id="Inventory">
+                    Inventory
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="secondary-cont">
+
+
+            <div id="upNewForm" style="display: none;">
+                <form action="/admin/upload-product" method="post" enctype="multipart/form-data">
+                    <label for="img">Select Product Image</label>
+                    <input type="file" name="img" id="img" required>
+                    <br>
+                    <label for="title">Product Title</label>
+                    <input type="text" name="title" id="title" required>
+                    <br>
+                    <label for="instock">How many in stock</label>
+                    <input type="number" name="instock" id="instock" required>
+                    <br>
+                    <input type="submit" value="Upload Product">
+                </form>
+
+            </div>
+
+            <div id="userdata" style="display: none;">
+                <table>
+                    <tr>
+                        <th>name</th>
+                        <th>email</th>
+                        <th>phone number</th>
+                        <th>address</th>
+                    </tr>
+                    <tr>
+                        <td>tahsin zidane</td>
+                        <td>bmtahsin3269@gmail.com</td>
+                        <td>01610300268</td>
+                        <td>jossore khulna chowgasa</td>
+                    </tr>
+
+                </table>
+            </div>
+
+        </div>
+
+
+    </div>
+    <script src="/js/admin-ui.js"></script>
+</body>
+
+</html>

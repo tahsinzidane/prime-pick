@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        online store in your area || <%= brandName %>
+    </title>
+</head>
+
+<body>
+    <h1>hi my name is tahsin zidane from <%= brandName %>
+    </h1>
+    <div class="products">
+        <% productDetails.forEach(product=> { %>
+            <div class="product-item">
+                <img src="<%= product.uploadedImg %>" alt="<%= product.title %>" />
+                <h3>
+                    <%= product.title %>
+                </h3>
+                <p>In stock: <%= product.instock %>
+                </p>
+            </div>
+            <% }) %>
+    </div>
+</body>
+
+</html>
